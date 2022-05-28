@@ -1,0 +1,342 @@
+// IMPORT FONT (INTER)
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+// CSS VARIABLES DECLARATION
+$font-stack: "Inter", sans-serif;
+
+$primary-color: #00214d;
+$secondary-color: #00ebc7;
+$primary2-color: #1b2d45;
+$white-color: #ffffff;
+$white2-color: #fffffe;
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: $font-stack;
+}
+
+// NAVIGATION
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 50px 120px 0 120px;
+
+  .logo-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 36px;
+      height: 31px;
+    }
+
+    h4 {
+      font-size: 24px;
+      font-weight: 700;
+      color: $primary-color;
+      padding-left: 10px;
+    }
+  }
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li a {
+      text-decoration: none;
+      margin-left: 56px;
+      color: $primary2-color;
+      font-size: 16px;
+      font-weight: 400;
+    }
+
+    .selected {
+      font-weight: 700;
+      background-color: $secondary-color;
+      border-radius: 3px;
+      padding: 15px;
+    }
+  }
+}
+
+// GENERAL CLASSES
+
+.selectedButton {
+  outline: none;
+  font-size: 16px;
+  font-weight: 700;
+  color: $primary2-color;
+  background-color: $secondary-color;
+  border: 1px solid $secondary-color;
+  border-radius: 3px;
+  padding: 15px;
+}
+
+// HERO SECTION
+
+.hero {
+  width: 40%;
+  height: auto;
+  margin: 120px 120px 0 120px;
+  .hero-title {
+    font-weight: 700;
+    font-size: 60px;
+    color: $primary-color;
+    white-space: nowrap;
+  }
+  .hero-brief {
+    font-weight: 400;
+    font-size: 16px;
+    color: $primary2-color;
+    padding-bottom: 20px;
+  }
+}
+
+// HERO BACKGROUND SECTION
+.hero-background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  display: grid;
+  grid-template-columns: 40% 40% 20%;
+  grid-template-rows: 70% 30%;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    opacity: 0.6;
+  }
+}
+
+.image4 {
+  grid-column-start: 3;
+  grid-column-end: span 1;
+  grid-row-start: 1;
+  grid-row-end: span 1;
+}
+.image1 {
+  grid-column-start: 1;
+  grid-column-end: span 1;
+  grid-row-start: 2;
+  grid-row-end: span 1;
+}
+.image2 {
+  grid-column-start: 2;
+  grid-column-end: span 1;
+  grid-row-start: 2;
+  grid-row-end: span 1;
+}
+.image3 {
+  grid-column-start: 3;
+  grid-column-end: span 1;
+  grid-row-start: 2;
+  grid-row-end: span 1;
+}
+
+// FOOTER SECTION
+footer {
+  background-color: $primary-color;
+  position: absolute;
+}
+
+.sub-footer {
+  width: 80%;
+  margin: auto;
+  background-color: $white2-color;
+  color: $primary-color;
+  padding: 20px;
+  border: 1px solid $white2-color;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 10%;
+  top: -20%;
+  // margin-left: -40%;
+
+  .sub-footer-title {
+    font-weight: 600;
+    font-size: 24px;
+    color: $primary-color;
+    padding-bottom: 20px;
+  }
+
+  form {
+    margin-bottom: 20px;
+
+    input {
+      background-color: #f2f4f6;
+      color: $primary-color;
+      font-weight: 400;
+      font-size: 18px;
+      padding: 15px 15px;
+      border: 1px solid #f2f4f6;
+      border-radius: 5px;
+      margin-right: 10px;
+
+      &::placeholder {
+        color: $primary-color;
+      }
+
+      &:focus {
+        outline: none;
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+      }
+    }
+  }
+
+  .sub-footer-brief {
+    font-weight: 400;
+    font-size: 18px;
+    color: $primary-color;
+    padding-bottom: 20px;
+  }
+
+  .sub-footer-lasttext {
+    font-weight: 400;
+    font-size: 14px;
+    color: $primary-color;
+    padding-bottom: 20px;
+    text-align: center;
+  }
+}
+
+.main-footer {
+  padding: 120px;
+  padding-top: 150px;
+  display: flex;
+  justify-content: center;
+  color: $white-color;
+  gap: 40px;
+}
+
+// FOOTER NAVIGATION FIRST PART/3
+.main-footer-nav {
+  width: 33%;
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {
+      padding-bottom: 10px;
+      a {
+        color: $secondary-color;
+        font-size: 18px;
+        font-weight: 400;
+        text-decoration: none;
+        white-space: nowrap;
+        svg {
+          width: 10px;
+          height: 14px;
+          font-weight: 900;
+          margin-right: 10px;
+
+          path {
+            stroke: $secondary-color;
+            stroke-width: 3px;
+          }
+        }
+      }
+    }
+  }
+
+  .main-footer-logo-wrapper {
+    display: flex;
+    margin-top: 80px;
+    align-items: center;
+
+    img {
+      width: 50px;
+      height: 42px;
+    }
+
+    h4 {
+      font-size: 24px;
+      font-weight: 700;
+      color: $white-color;
+      padding-left: 10px;
+    }
+  }
+}
+
+// FOOTER BRIEF SECOND PART/3
+.main-footer-brief {
+  width: 33%;
+  color: $white-color;
+  font-size: 18px;
+
+  span {
+    color: $secondary-color;
+  }
+
+  .social_logos {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    gap: 15px;
+    margin: 40px 0px;
+    color: $white-color;
+
+    div.social_logo_wrapper {
+      padding: 10px;
+      border: 1px solid $white-color;
+      background-color: $white-color;
+      border-radius: 50%;
+    }
+
+    .social_logo {
+      width: 25px;
+      height: 25px;
+      fill: $secondary-color !important;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        animation: spin 1s linear 0s 2;
+      }
+    }
+
+    .social_logo path {
+      fill: $secondary-color !important;
+
+      circle#XMLID_83_ {
+        fill: $secondary-color !important;
+      }
+    }
+  }
+}
+
+// FOOTER MAP THIRD PART/3
+.main-footer-map {
+  width: 33%;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+// FOOTER COPYRIGHT
+
+.main-footer-copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $white-color;
+  font-size: 18px;
+  font-weight: 400;
+  padding-bottom: 60px;
+}
